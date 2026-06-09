@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-06-09T16:10:02.500Z"
+  },
+  "update": {
+    "checkOnStart": false
+  },
+  "browser": {
+    "defaultProfile": "openclaw"
+  },
+  "auth": {
+    "profiles": {
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "kimi-coding": {
+        "baseUrl": "https://agent-gw.kimi.com/coding",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "k2p6",
+            "name": "k2p6",
+            "reasoning": true,
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "kimi-coding/k2p6"
+      },
+      "workspace": "C:\\Users\\ranga\\.kimi_openclaw\\workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "thinkingDefault": "high",
+      "timeoutSeconds": 300
+    },
+    "list": [
+      {
+        "id": "main",
+        "groupChat": {
+          "mentionPatterns": [
+            ".*"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "full"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "YOUR_BOT_TOKEN_HERE",
+      "groups": {
+        "-1003797113253": {
+          "requireMention": false,
+          "groupPolicy": "open"
+        }
+      },
+      "allowFrom": [
+        "6652708323"
+      ],
+      "groupAllowFrom": [
+        "6652708323"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "controlUi": {
+      "allowedOrigins": [
+        "null"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "YOUR_GATEWAY_TOKEN_HERE"
+    }
+  },
+  "plugins": {
+    "allow": [
+      "kimi-claw",
+      "kimi-search",
+      "memory-core",
+      "openclaw-lark",
+      "imessage",
+      "telegram",
+      "qqbot",
+      "dingtalk-connector",
+      "wecom-openclaw-plugin",
+      "openclaw-weixin"
+    ],
+    "entries": {
+      "kimi-search": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "kimi-claw": {
+        "enabled": true,
+        "config": {
+          "bridge": {
+            "mode": "acp",
+            "url": "wss://www.kimi.com/api-claw/bots/agent-ws",
+            "kimiapiHost": "https://www.kimi.com/api-claw",
+            "kimiFileDownloadDir": "C:\\Users\\ranga\\.kimi_openclaw\\kimi\\downloads",
+            "token": "YOUR_KIMI_BRIDGE_TOKEN_HERE"
+          },
+          "gateway": {
+            "url": "ws://127.0.0.1:18679",
+            "token": "YOUR_GATEWAY_TOKEN_HERE",
+            "agentId": "main"
+          },
+          "retry": {
+            "baseMs": 1000,
+            "maxMs": 600000,
+            "maxAttempts": 0
+          },
+          "log": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  }
+}
