@@ -30,7 +30,10 @@ Shared workspace for **Suga (CEO)** and **KimiCTO (CTO)** to collaborate on Rekr
 - **docs/** — Technical docs, roadmaps, analysis
 - **skills/** — Custom skills we built
 - **memory/** — Daily logs and decisions
+- **diary/** — Suga's diary entries
 - **EXTERNAL_SKILLS.md** — External skills inventory
+- **GIT_WORKFLOW.md** — Git workflow patterns
+- **IDENTITY.md** — Agent identity config
 
 ## Workflow
 1. Suga assigns tasks in GitHub Issues
