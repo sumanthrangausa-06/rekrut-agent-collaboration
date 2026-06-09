@@ -38,9 +38,14 @@ Shared workspace for **Suga (CEO)** and **KimiCTO (CTO)** to collaborate on Rekr
 3. Both report status in Telegram group
 4. When blocked, tag the other person
 
-## Current Priority Issues
-- #1: Cartesia.ai Integration (P0)
-- #2: Frontend Migration — 19 Candidate Pages (P1)
+---
 
-## Repo
-https://github.com/sumanthrangausa-06/rekrut-agent-collaboration
+## Sensitive Memory Files
+
+These files were excluded from git to avoid leaking API keys:
+- `2026-06-08-0648.md` — Contains Stripe test keys (already in .env)
+- `2026-06-09.md` — Contains Cartesia API key (already in .env)
+- `2026-06-09-0648.md` — Contains credential references
+- `2026-06-09-0912.md` — Contains credential references
+
+All API keys are in `Rekrut_AI_v2/.env` and `.env.example` — use those instead.
